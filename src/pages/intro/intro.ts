@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 import {IonicPage, NavController, NavParams} from 'ionic-angular';
 import {SlideInterface} from "../../components/intro-slider/intro-slider";
+import {PageLogin} from "../Page";
 
 /**
  * Generated class for the IntroPage page.
@@ -18,7 +19,7 @@ import {SlideInterface} from "../../components/intro-slider/intro-slider";
 export class IntroPage {
 
   sliders: Array<SlideInterface> = [{
-    title: "Why Use Doctor App",
+    title: "Why Use Doctor Online App",
     description: "In-depth and authenticated health articles, informational doctors videos and health forums.",
     imageUrl: "assets/imgs/sample_1.jpg"
   }, {
@@ -27,7 +28,7 @@ export class IntroPage {
     imageUrl: "assets/imgs/sample_2.jpg"
   }, {
     title: "24x7 Healthcare",
-    description: "Modasta provides you access to all healthcare related information through authenticated sources 24x7 throughout",
+    description: "Doctor online  provides you access to all healthcare related information through authenticated sources 24x7 throughout",
     imageUrl: "assets/imgs/sample_3.jpg"
   }, {
     title: "Videos",
@@ -40,4 +41,7 @@ export class IntroPage {
 
   }
 
+  introSliderDidFinished() {
+    this.navCtrl.push(PageLogin);
+  }
 }

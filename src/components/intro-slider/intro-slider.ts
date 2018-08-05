@@ -1,4 +1,4 @@
-import {Component, Input, ViewChild} from '@angular/core';
+import {Component, EventEmitter, Input, Output, ViewChild} from '@angular/core';
 import {NavController, Slides} from "ionic-angular";
 
 
@@ -16,7 +16,9 @@ export interface SlideInterface {
 export class IntroSliderComponent {
 
   @ViewChild('slider') slider: Slides;
-  @Input('slides') slides: Array<SlideInterface>;
+  @Input() slides: Array<SlideInterface>;
+  @Output() goToNext: EventEmitter<boolean> = new EventEmitter<boolean>();
+
   allSlides: Array<SlideInterface>;
   slideIndex = 0;
   pageReady: boolean = false;
@@ -33,15 +35,17 @@ export class IntroSliderComponent {
 
   onSlideChanged() {
     this.slideIndex = this.slider.getActiveIndex();
-    console.log('Slide changed! Current index is', this.slideIndex);
   }
 
   goToApp() {
-    console.log('Go to App clicked');
+    /** Send back the response to parent that the introSlide is over **/
+    this.goToNext.emit(true);
   }
 
   skip() {
-    console.log('Skip clicked');
+    /** Send back the response to parent that the introSlide is over **/
+
+    this.goToNext.emit(true);
   }
 
 }
