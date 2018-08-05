@@ -1,0 +1,35 @@
+page-language-select {
+
+  .scroll-content {
+    background: #11998e; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #38ef7d, #11998e); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #38ef7d, #11998e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    .grid {
+      height: 100%;
+      justify-content: center;
+
+      .row-top-header {
+        align-self: center;
+        color: color($colors, light, base);
+        h2 {
+          font-weight: 300;
+        }
+      }
+
+      .row-language {
+        align-items: center;
+        align-self: center;
+        .lbl-name {
+          margin: 16px;
+          color: color($colors, white, base);
+        }
+        .img-language {
+          height: 30px;
+        }
+      }
+    }
+
+  }
+
+}
