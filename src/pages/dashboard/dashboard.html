@@ -1,0 +1,19 @@
+<ion-header no-border>
+  <ion-navbar color="secondary">
+    <ion-row>
+      <ion-col col-auto>
+        <img style="width: 40px" src="assets/icon/daktar_online.png">
+      </ion-col>
+      <ion-col>
+        <ion-title>{{ 'Daktar Online' | translate }}</ion-title>
+      </ion-col>
+    </ion-row>
+
+  </ion-navbar>
+</ion-header>
+
+<ion-content *ngIf="pageReady">
+
+  <super-tab-component [tabs]="tabs"></super-tab-component>
+
+</ion-content>

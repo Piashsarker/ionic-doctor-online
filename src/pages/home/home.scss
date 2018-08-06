@@ -1,0 +1,39 @@
+page-home {
+  .scroll-content {
+    background: #a6d84d; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #a6d84d, #5e9c1b); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #5e9c1b, #a6d84d); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    .card-service {
+      background: #ffffff;
+      border-radius: 5px;
+      width: 100%;
+      margin: 10px 0 0 0;
+
+      .lbl-title {
+        font-size: 16px;
+        margin-right: 0;
+        color: #747572;
+      }
+
+      .btn-service {
+        height: inherit;
+
+      }
+      .img-service {
+        width: 50px;
+        margin-right: auto;
+        margin-left: auto;
+      }
+      .lbl-service {
+        font-size: 10px;
+        text-align: center;
+        margin-right: 0;
+        color: #626360;
+
+      }
+    }
+
+  }
+
+}

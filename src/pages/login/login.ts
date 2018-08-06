@@ -2,7 +2,7 @@ import {Component} from '@angular/core';
 import {IonicPage, NavController, NavParams} from 'ionic-angular';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {AppValidators} from "../../Validators/AppValidators";
-import {PageForgotPassword, PageRegistration} from "../Page";
+import {PageDashboard, PageForgotPassword, PageRegistration} from "../Page";
 
 /**
  * Generated class for the LoginPage page.
@@ -42,6 +42,7 @@ export class LoginPage {
   }
 
   validatePasswordAction() {
+    this.navCtrl.setRoot(PageDashboard);
     this.submitted = true;
     if (!this.form.valid) {
       this.submitted = false;

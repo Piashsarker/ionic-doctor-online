@@ -3,7 +3,7 @@ import {IonicPage, NavController, NavParams} from 'ionic-angular';
 import {PageIntroPage} from "../Page";
 
 
-interface LanguageInterface {
+export interface LanguageInterface {
   id?: number,
   name?: string,
   icon?: string
@@ -17,7 +17,7 @@ interface LanguageInterface {
 })
 export class LanguageSelectPage {
 
-  languages: Array<LanguageInterface> = [
+  public languages: Array<LanguageInterface> = [
     {id: 1, name: 'Bangla', icon: 'assets/icon/bangladesh.svg'},
     {id: 2, name: 'English', icon: 'assets/icon/usa.svg'}
   ];

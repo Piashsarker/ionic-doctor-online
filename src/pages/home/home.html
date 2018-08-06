@@ -1,0 +1,41 @@
+<ion-content>
+
+
+  <ion-card class="card-service">
+
+    <ion-row>
+      <ion-label text-center class="lbl-title">Health Services</ion-label>
+    </ion-row>
+
+    <ion-row>
+      <ion-col text-center *ngFor="let services of healthServices" col-4>
+        <button ion-button clear large class="btn-service" no-padding>
+          <div>
+            <img class="img-service" [src]="services.img">
+            <ion-label class="lbl-service">{{services.text}}</ion-label>
+          </div>
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+
+  <ion-card class="card-service">
+
+    <ion-row>
+      <ion-label text-center class="lbl-title">Health Services</ion-label>
+    </ion-row>
+
+    <ion-row>
+      <ion-col text-center *ngFor="let services of healthInformations" col-4>
+        <button ion-button clear large class="btn-service" no-padding>
+          <div>
+            <img class="img-service" [src]="services.img">
+            <ion-label class="lbl-service">{{services.text}}</ion-label>
+          </div>
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+
+
+</ion-content>

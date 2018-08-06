@@ -1,0 +1,3 @@
+<super-tabs *ngIf="tabs" toolbarColor="light" toolbarBackground="secondary" indicatorColor="light">
+  <super-tab *ngFor="let tab of tabs" [root]="tab.page" [title]="tab.title" [icon]="tab.icon"></super-tab>
+</super-tabs>
