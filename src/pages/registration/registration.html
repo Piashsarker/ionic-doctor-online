@@ -1,18 +1,130 @@
-<!--
-  Generated template for the RegistrationPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
-<ion-header>
-
-  <ion-navbar>
-    <ion-title>registration-page</ion-title>
+<ion-header no-border>
+  <ion-navbar color="secondary">
+    <ion-title>{{ 'Registration' | translate }}</ion-title>
   </ion-navbar>
-
 </ion-header>
 
 
-<ion-content padding>
+<ion-content>
+
+
+  <ion-grid padding>
+
+
+    <ion-row class="row-img" margin-top><img class="top-icon" src="assets/icon/daktar_online.png"></ion-row>
+    <ion-row class="row-title" margin-bottom><h2 class="top-title">{{'Sign up with Daktar Online' | translate}}</h2>
+    </ion-row>
+
+
+    <ion-row class="row-form">
+
+
+      <form [formGroup]="form" novalidate class="form-login">
+
+        <div class="div-input">
+
+          <ion-row class="row-mobile" no-padding>
+            <ion-col no-padding col-2 text-center align-self-center class="country_code">
+              <ion-icon name="ios-mail-outline" class="icon-email" color="secondary"></ion-icon>
+            </ion-col>
+
+            <ion-col no-padding col-10 class="col-mobile">
+              <ion-item no-lines no-padding>
+                <ion-input formControlName="username"
+                           name="username"
+                           type="text" spellcheck="false"
+                           autocapitalize="off"
+                           maxlength="40"
+                           placeholder="Enter email"
+                           clearInput clearOnEdit="false">
+
+                </ion-input>
+              </ion-item>
+
+            </ion-col>
+          </ion-row>
+
+
+        </div>
+
+
+        <div class="div-input">
+          <ion-row class="row-mobile" no-padding>
+            <ion-col no-padding col-2 text-center align-self-center class="country_code">
+              <ion-icon name="ios-lock-outline" class="icon-email" color="secondary"></ion-icon>
+            </ion-col>
+
+            <ion-col no-padding col-8 class="col-mobile">
+              <ion-item no-padding no-lines>
+                <ion-input #password formControlName="password"
+                           name="password" clearInput
+                           clearOnEdit="false"
+                           spellcheck="false"
+                           [type]="getType()"
+                           autocapitalize="off"
+                           maxlength="30"
+                           placeholder="Enter  password"
+                           [class.invalid]="!form.controls.password.valid && (submitted)">
+                </ion-input>
+
+              </ion-item>
+            </ion-col>
+            <ion-col no-padding col-2 text-center align-self-center class="row-mobile" (click)="toggleTextPassword()">
+              <ion-icon *ngIf="isShowPassword()" name="ios-eye-outline" class="icon-email" color="secondary"></ion-icon>
+              <ion-icon *ngIf="!isShowPassword()" name="ios-eye-off-outline" class="icon-email"
+                        color="secondary"></ion-icon>
+            </ion-col>
+          </ion-row>
+
+        </div>
+        <div class="div-input">
+          <ion-row class="row-mobile" no-padding>
+            <ion-col no-padding col-2 text-center align-self-center class="country_code">
+              <ion-icon name="ios-lock-outline" class="icon-email" color="secondary"></ion-icon>
+            </ion-col>
+
+            <ion-col no-padding col-8 class="col-mobile">
+              <ion-item no-padding no-lines>
+                <ion-input #password formControlName="confirm_password"
+                           name="confirm_password" clearInput
+                           clearOnEdit="false"
+                           spellcheck="false"
+                           [type]="getType()"
+                           autocapitalize="off"
+                           maxlength="30"
+                           placeholder="Confirm  password"
+                           [class.invalid]="!form.controls.password.valid && (submitted)">
+                </ion-input>
+
+              </ion-item>
+            </ion-col>
+            <ion-col no-padding col-2 text-center align-self-center class="row-mobile" (click)="toggleTextPassword()">
+              <ion-icon *ngIf="isShowPassword()" name="ios-eye-outline" class="icon-email" color="secondary"></ion-icon>
+              <ion-icon *ngIf="!isShowPassword()" name="ios-eye-off-outline" class="icon-email"
+                        color="secondary"></ion-icon>
+            </ion-col>
+          </ion-row>
+
+        </div>
+
+
+        <div padding-right padding-left class="btn-login" margin-top>
+          <button ion-button block round icon-right type="submit" color="secondary">{{'Register' | translate}}
+          </button>
+        </div>
+
+
+      </form>
+
+
+    </ion-row>
+
+    <ion-row padding>
+      <span class="terms-and-condition" [innerHtml]=termsAndConditions> </span>
+    </ion-row>
+
+
+  </ion-grid>
+
 
 </ion-content>
