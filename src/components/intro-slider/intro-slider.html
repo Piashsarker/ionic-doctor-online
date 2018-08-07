@@ -10,7 +10,7 @@
   </ion-navbar>
 </ion-header>
 <ion-content fullscreen="true" class="no-padding-top" *ngIf="pageReady">
-  <ion-slides #slider pager="true" autoplay="3000" (ionSlideWillChange)="onSlideChanged()">
+  <ion-slides #slider pager="true" (ionSlideWillChange)="onSlideChanged()">
 
     <ion-slide *ngFor="let slide of allSlides"
                class="slide-background"

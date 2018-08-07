@@ -4,16 +4,25 @@ page-home {
     background: -webkit-linear-gradient(to bottom, #a6d84d, #5e9c1b); /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to bottom, #5e9c1b, #a6d84d); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
-    .card-service {
+    %title {
+      font-size: 16px;
+      margin-right: 0;
+      color: #747572;
+    }
+
+    %card-style {
       background: #ffffff;
       border-radius: 5px;
       width: 100%;
-      margin: 10px 0 0 0;
+      margin: 5px 0 0 0;
+    }
+
+    .card-service {
+
+      @extend %card-style;
 
       .lbl-title {
-        font-size: 16px;
-        margin-right: 0;
-        color: #747572;
+        @extend %title;
       }
 
       .btn-service {
@@ -31,6 +40,15 @@ page-home {
         margin-right: 0;
         color: #626360;
 
+      }
+    }
+
+    .card-trending {
+      @extend %card-style;
+      height: 200px;
+
+      .lbl-title {
+        @extend %title;
       }
     }
 

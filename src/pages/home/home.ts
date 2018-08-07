@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
 import {IonicPage, NavController, NavParams} from 'ionic-angular';
+import {TrendingInterface} from "../../components/trending/trending";
 
 
 export interface HealthServices {
@@ -23,11 +24,28 @@ export class HomePage {
     {text: 'Doc Speak', img: 'assets/icon/doctor_speak.svg'},
     {text: 'Diseases A-Z', img: 'assets/icon/dieases.svg'}];
 
+  trendings: Array<TrendingInterface> = [{
+    id: '1',
+    title: 'A title goes here',
+    type: 'text_post',
+    imageUrl: 'assets/imgs/sample_4.jpg'
+  },
+    {id: '1', title: 'A title goes here', type: 'video_post', imageUrl: 'assets/imgs/sample_4.jpg'},
+    {id: '1', title: 'A title goes here', type: 'video_post', imageUrl: 'assets/imgs/sample_4.jpg'}];
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad HomePage');
+
+  servicesOnClick(services: HealthServices) {
+    console.log(services)
   }
 
+  informationOnClick(services: HealthServices) {
+    console.log(services);
+  }
+
+  trendingClick($event: TrendingInterface) {
+    console.log($event);
+  }
 }
