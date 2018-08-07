@@ -1,0 +1,29 @@
+<ion-slides #slider pager="false" slidesPerView="1.4" *ngIf="allTrending">
+
+  <ion-slide *ngFor="let trending of allTrending"
+             class="slide-background"
+             [ngStyle]="{'background-image': 'url(' + trending.imageUrl +')'}"
+             (click)="trendingOnClick(trending)">
+
+    <ion-grid class="grid-container">
+      <ion-row class="row-container">
+
+      </ion-row>
+      <ion-row class="row-container" align-items-center>
+        <ion-col text-center>
+          <ion-icon class="icon-youtube" name="logo-youtube" color="youtube"
+                    *ngIf="trending.type=='video_post'"></ion-icon>
+        </ion-col>
+
+      </ion-row>
+      <ion-row
+        [ngClass]="{'row-container': trending.type !== 'text_post','row-container-text': trending.type === 'text_post'}">
+        <ion-col class="col-title">
+          <ion-label class="title" *ngIf="trending.type=='text_post'">{{trending.title}}</ion-label>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+
+  </ion-slide>
+</ion-slides>

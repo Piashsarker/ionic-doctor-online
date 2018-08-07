@@ -1,0 +1,44 @@
+trending {
+
+  .slide-background {
+    background-size: cover !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-color: transparent;
+    margin-right: 5px;
+    border-radius: 5px;
+    height: 78%;
+    .slide-zoom {
+      height: 100%;
+      .grid-container {
+        height: 100%;
+        padding: 0;
+        .row-container {
+          height: 33%;
+          margin: 0;
+          .icon-youtube {
+            font-size: 40px;
+          }
+        }
+        .row-container-text {
+          height: 33%;
+          margin: 0;
+          .col-title {
+            text-align: left;
+            padding: 0;
+            .title {
+              padding: 8px 0 8px 5px;
+              color: white;
+              font-size: 14px;
+              background: rgba(0, 0, 0, 0.58);
+              border-bottom-right-radius: 5px;
+              border-top-right-radius: 5px;
+            }
+          }
+        }
+      }
+    }
+
+  }
+
+}

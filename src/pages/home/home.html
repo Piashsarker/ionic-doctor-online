@@ -22,15 +22,15 @@
   <ion-card class="card-service">
 
     <ion-row>
-      <ion-label text-center class="lbl-title">Health Services</ion-label>
+      <ion-label text-center class="lbl-title">Health Information</ion-label>
     </ion-row>
 
     <ion-row>
-      <ion-col text-center *ngFor="let services of healthInformations" col-4>
+      <ion-col text-center *ngFor="let information of healthInformations" col-4>
         <button ion-button clear large class="btn-service" no-padding (click)="informationOnClick(services)">
           <div>
-            <img class="img-service" [src]="services.img">
-            <ion-label class="lbl-service">{{services.text}}</ion-label>
+            <img class="img-service" [src]="information.img">
+            <ion-label class="lbl-service">{{information.text}}</ion-label>
           </div>
         </button>
       </ion-col>
@@ -56,6 +56,29 @@
     </ion-row>
 
     <trending [allTrending]="trendings" (trendingAction)="trendingClick($event)"></trending>
+
+  </ion-card>
+
+
+  <ion-card class="card-tools">
+
+    <ion-row>
+      <ion-label text-center class="lbl-title">Health Tools</ion-label>
+    </ion-row>
+
+    <ion-row>
+      <ion-col text-center *ngFor="let information of healthInformations" col-4>
+        <ion-card>
+          <button ion-button clear large class="btn-service" no-padding (click)="informationOnClick(services)">
+            <div>
+              <img class="img-service" [src]="information.img">
+              <ion-label class="lbl-service">{{information.text}}</ion-label>
+            </div>
+          </button>
+        </ion-card>
+
+      </ion-col>
+    </ion-row>
 
   </ion-card>
 
