@@ -25,13 +25,16 @@ export class HomePage {
     {text: 'Diseases A-Z', img: 'assets/icon/dieases.svg'}];
 
   trendings: Array<TrendingInterface> = [{
-    id: '1',
-    title: 'A title goes here',
-    type: 'text_post',
-    imageUrl: 'assets/imgs/sample_4.jpg'
+    id: '1', title: 'A title goes here', type: 'text_post', imageUrl: 'assets/imgs/sample_4.jpg'
   },
     {id: '1', title: 'A title goes here', type: 'video_post', imageUrl: 'assets/imgs/sample_4.jpg'},
     {id: '1', title: 'A title goes here', type: 'video_post', imageUrl: 'assets/imgs/sample_4.jpg'}];
+
+
+  healthTools: Array<HealthServices> = [{text: 'BMI Calculator', img: 'assets/icon/bmi_calculator.svg'},
+    {text: 'Pregnancy Due Date Calculator', img: 'assets/icon/pregnancy.svg'},
+    {text: 'Ovulation Calender', img: 'assets/icon/fertilization.svg'}];
+
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }

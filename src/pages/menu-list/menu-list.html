@@ -1,18 +1,11 @@
-<!--
-  Generated template for the MenuListPage page.
+<ion-content>
+  <ion-list>
+    <button ion-item *ngFor="let menu of menus">
+      <ion-icon [name]="menu.icon" item-start color="primary"></ion-icon>
+      <ion-label text-wrap color="dark_light">{{menu.text}}</ion-label>
+      <ion-icon *ngIf="menu.forwardIcon" item-end name="ios-arrow-forward-outline" color="dark_light"></ion-icon>
+    </button>
+  </ion-list>
 
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
-<ion-header>
-
-  <ion-navbar>
-    <ion-title>MenuList</ion-title>
-  </ion-navbar>
-
-</ion-header>
-
-
-<ion-content padding>
 
 </ion-content>

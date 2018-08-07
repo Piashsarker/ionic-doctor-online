@@ -1,18 +1,27 @@
-<!--
-  Generated template for the ProfilePage page.
+<ion-content parallax-header no-bounce class="bg-modal">
+  <div class="header-image" [ngStyle]="{'background-image': 'url(' + user.coverImage +')'}">
 
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
-<ion-header>
-
-  <ion-navbar>
-    <ion-title>Profile</ion-title>
-  </ion-navbar>
-
-</ion-header>
+  </div>
+  <div class="main-content" text-wrap text-center>
+    <div class="circular" [ngStyle]="{'background-image': 'url(' + user.profileImage +')'}"></div>
+    <h2>{{user.full_name}}</h2>
+    <p>{{user.username}} &bull; {{user.email}}</p>
+    <!--<p class="profile-description">{{user.description}}</p>-->
 
 
-<ion-content padding>
+    <ion-list>
+      <ion-list-header>
+        Settings
+      </ion-list-header>
+      <button ion-item *ngFor="let setting of profileSettings">
+        <ion-icon [name]="setting.icon" item-start color="primary"></ion-icon>
+        <ion-label text-wrap color="dark_light">{{setting.text}}</ion-label>
+        <ion-icon item-end name="ios-arrow-forward-outline" color="dark_light"></ion-icon>
+      </button>
+    </ion-list>
+
+
+  </div>
+
 
 </ion-content>

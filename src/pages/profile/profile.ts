@@ -1,12 +1,8 @@
 import {Component} from '@angular/core';
-import {IonicPage, NavController, NavParams} from 'ionic-angular';
+import {IonicPage, NavController} from 'ionic-angular';
+import {User} from "../../model/User";
+import {ProfileSetting} from "../../model/ProflieSetting";
 
-/**
- * Generated class for the ProfilePage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @IonicPage()
 @Component({
@@ -15,11 +11,29 @@ import {IonicPage, NavController, NavParams} from 'ionic-angular';
 })
 export class ProfilePage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  user: User = {
+    full_name: 'Piash Sarker',
+    profileImage: 'assets/imgs/logo.png',
+    coverImage: 'assets/imgs/sample_1.jpg',
+    username: '@piashsarker',
+    email: 'sarkerpt@gmail.com'
+  };
+
+  profileSettings: Array<ProfileSetting> = [
+    {text: 'My Account', icon: 'md-contact', forwardIcon: true},
+    {text: 'My Text Queries and Answer', icon: 'md-text', forwardIcon: true},
+    {text: 'My Video Consultation', icon: 'md-videocam', forwardIcon: true},
+    {text: 'My Reports', icon: 'md-document', forwardIcon: true},
+    {text: 'My Lab Orders', icon: 'md-flask', forwardIcon: true},
+    {text: 'Saved', icon: 'md-cloud-download', forwardIcon: true},
+    {text: 'Logout', icon: 'md-log-out', forwardIcon: true},
+  ];
+
+
+  constructor(public navCtrl: NavController) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad ProfilePage');
+    console.log('ionViewDidLoad ProfileFivePage');
   }
-
 }

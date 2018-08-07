@@ -1,3 +1,63 @@
 page-notification {
 
+  .scroll-content {
+    background: #a6d84d; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #a6d84d, #5e9c1b); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #5e9c1b, #a6d84d); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    .empty_notification_grid {
+      height: 100%;
+      width: 100%;
+      .row {
+        height: 100%;
+        width: 100%;
+        .col {
+          .icon {
+            font-size: 100px;
+          }
+          .label {
+            font-size: 20px;
+          }
+          color: #9e9e9e;
+        }
+      }
+    }
+    .notification-div {
+      .notification-card {
+        border-radius: 4px;
+        .round-parent {
+          height: 50px;
+          width: 50px;
+          border-radius: 50%;
+          background: #F2994A; /* fallback for old browsers */
+          background: -webkit-linear-gradient(to right, #F2C94C, #F2994A); /* Chrome 10-25, Safari 5.1-6 */
+          background: linear-gradient(to right, #F2C94C, #F2994A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+          .icon {
+
+            font-size: 30px;
+            color: white;
+
+          }
+        }
+
+        .notification-title {
+          margin: 0;
+          font-weight: bold;
+          color: #424242;
+          font-size: 1.5rem;
+
+        }
+        .notification-description {
+          color: #4e4e4e;
+          font-size: 14px;
+        }
+        .notification-date-time {
+          font-size: 1.1rem;
+          color: #797979;
+
+        }
+      }
+    }
+  }
+
+
 }

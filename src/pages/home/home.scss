@@ -57,9 +57,13 @@ page-home {
         color: color($colors, white, base);
       }
       .card {
+        @extend %card-style;
         margin: 0;
-        width: 100%;
+        height: 110px;
         padding-top: 10px;
+        .btn-service {
+          padding: 5px;
+        }
 
       }
 
