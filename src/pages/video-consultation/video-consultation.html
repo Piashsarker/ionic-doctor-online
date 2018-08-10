@@ -1,0 +1,74 @@
+<ion-header no-border>
+  <ion-navbar color="secondary">
+    <ion-row>
+      <ion-col col-auto>
+        <img style="width: 40px" src="assets/icon/daktar_online.png">
+      </ion-col>
+      <ion-col>
+        <ion-title>{{ 'Video Consultation' | translate }}</ion-title>
+      </ion-col>
+    </ion-row>
+
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list margin>
+    <button ion-item>
+      <ion-icon name="md-disc" item-start color="primary"></ion-icon>
+      <ion-label text-wrap color="dark_light">Speciality</ion-label>
+      <ion-select [(ngModel)]="speciality" interface="popover">
+        <ion-option value="f">Allergist/Immonologist</ion-option>
+        <ion-option value="m">Bariatic Sergon</ion-option>
+      </ion-select>
+    </button>
+
+    <button ion-item>
+      <ion-icon name="md-disc" item-start color="primary"></ion-icon>
+      <ion-label text-wrap color="dark_light">Prefered Language</ion-label>
+      <ion-select [(ngModel)]="language" interface="popover">
+        <ion-option value="f">Bangla</ion-option>
+        <ion-option value="m">Hindi</ion-option>
+        <ion-option value="ee">English</ion-option>
+      </ion-select>
+    </button>
+
+
+    <button ion-item color="primary">
+      Search
+    </button>
+
+
+  </ion-list>
+
+
+  <ion-list margin>
+    <ion-list-header no-margin>Popular Search</ion-list-header>
+    <button ion-item>
+      <ion-label text-wrap color="dark_light">Cardiologist</ion-label>
+    </button>
+    <button ion-item>
+      <ion-label text-wrap color="dark_light">Cardiologist</ion-label>
+    </button>
+    <button ion-item>
+      <ion-label text-wrap color="dark_light">Cardiologist</ion-label>
+    </button>
+
+    <button ion-item>
+      <ion-label text-wrap color="dark_light">Cardiologist</ion-label>
+    </button>
+
+    <button ion-item>
+      <ion-label text-wrap color="dark_light">Cardiologist</ion-label>
+    </button>
+
+    <button ion-item>
+      <ion-label text-wrap color="dark_light">Cardiologist</ion-label>
+    </button>
+
+
+  </ion-list>
+
+
+</ion-content>

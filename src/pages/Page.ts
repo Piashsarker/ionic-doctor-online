@@ -8,6 +8,9 @@ export const PageHome: string = 'HomePage';
 export const PageProfile: string = 'ProfilePage';
 export const PageNotification: string = 'NotificationPage';
 export const PageMenuList: string = 'MenuListPage';
+export const PageLabTest: string = 'LabTestPage';
+export const PageVideoConsultation: string = 'VideoConsultationPage';
+export const PageTextConsultation: string = 'PageTextConsultation';
 
 
 
