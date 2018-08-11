@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
 import {IonicPage, NavController, NavParams} from 'ionic-angular';
+import {PageChat, PageVideoConsultationResult} from "../Page";
 
 /**
  * Generated class for the VideoConsultationPage page.
@@ -22,4 +23,11 @@ export class VideoConsultationPage {
     console.log('ionViewDidLoad VideoConsultationPage');
   }
 
+  consultationSearch() {
+    this.navCtrl.push(PageVideoConsultationResult);
+  }
+
+  liveSupportOnClick() {
+    this.navCtrl.push(PageChat)
+  }
 }

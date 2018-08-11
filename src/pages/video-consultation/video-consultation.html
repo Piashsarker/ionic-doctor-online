@@ -1,4 +1,4 @@
-<ion-header no-border>
+<ion-header>
   <ion-navbar color="secondary">
     <ion-row>
       <ion-col col-auto>
@@ -14,7 +14,7 @@
 
 <ion-content>
 
-  <ion-list margin>
+  <ion-list>
     <button ion-item>
       <ion-icon name="md-disc" item-start color="primary"></ion-icon>
       <ion-label text-wrap color="dark_light">Speciality</ion-label>
@@ -35,40 +35,47 @@
     </button>
 
 
-    <button ion-item color="primary">
-      Search
+    <button color="primary" ion-item no-lines (click)="consultationSearch()">
+      <ion-label text-center color="white">SEARCH</ion-label>
     </button>
 
 
   </ion-list>
 
 
-  <ion-list margin>
+  <ion-list>
     <ion-list-header no-margin>Popular Search</ion-list-header>
-    <button ion-item>
+    <button ion-item (click)="consultationSearch()">
       <ion-label text-wrap color="dark_light">Cardiologist</ion-label>
     </button>
-    <button ion-item>
-      <ion-label text-wrap color="dark_light">Cardiologist</ion-label>
+    <button ion-item (click)="consultationSearch()">
+      <ion-label text-wrap color="dark_light">Sexologist</ion-label>
     </button>
-    <button ion-item>
-      <ion-label text-wrap color="dark_light">Cardiologist</ion-label>
-    </button>
-
-    <button ion-item>
-      <ion-label text-wrap color="dark_light">Cardiologist</ion-label>
+    <button ion-item (click)="consultationSearch()">
+      <ion-label text-wrap color="dark_light">Diabetologist</ion-label>
     </button>
 
-    <button ion-item>
-      <ion-label text-wrap color="dark_light">Cardiologist</ion-label>
+    <button ion-item (click)="consultationSearch()">
+      <ion-label text-wrap color="dark_light">Psychiatrist</ion-label>
     </button>
 
-    <button ion-item>
-      <ion-label text-wrap color="dark_light">Cardiologist</ion-label>
+    <button ion-item (click)="consultationSearch()">
+      <ion-label text-wrap color="dark_light">Dermatologist</ion-label>
+    </button>
+
+    <button ion-item (click)="consultationSearch()">
+      <ion-label text-wrap color="dark_light">Bariatric Surgeon</ion-label>
     </button>
 
 
   </ion-list>
+
+
+  <ion-fab bottom right>
+    <button ion-fab icon-only (click)="liveSupportOnClick()">
+      <ion-icon name="md-chatbubbles"></ion-icon>
+    </button>
+  </ion-fab>
 
 
 </ion-content>

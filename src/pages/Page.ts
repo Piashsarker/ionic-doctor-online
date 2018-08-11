@@ -11,7 +11,8 @@ export const PageMenuList: string = 'MenuListPage';
 export const PageLabTest: string = 'LabTestPage';
 export const PageVideoConsultation: string = 'VideoConsultationPage';
 export const PageTextConsultation: string = 'PageTextConsultation';
-
+export const PageVideoConsultationResult: string = 'VideoConsultationResultPage';
+export const PageChat: string = 'ChatPage';
 
 
 
