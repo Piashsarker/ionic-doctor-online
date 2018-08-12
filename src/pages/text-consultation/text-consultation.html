@@ -1,18 +1,58 @@
 <ion-header no-border>
   <ion-navbar color="secondary">
-    <ion-row>
-      <ion-col col-auto>
-        <img style="width: 40px" src="assets/icon/daktar_online.png">
-      </ion-col>
-      <ion-col>
-        <ion-title>{{ 'Text Consultation' | translate }}</ion-title>
-      </ion-col>
-    </ion-row>
+    <ion-title>{{ 'Text Consultation' | translate }}</ion-title>
 
   </ion-navbar>
 </ion-header>
 
 
-<ion-content padding>
+<ion-content>
+
+
+  <ion-row class="row-form">
+
+
+    <form [formGroup]="form" novalidate class="form-text-box">
+
+      <div class="div-input">
+
+        <ion-row class="row-mobile" no-padding>
+          <ion-col no-padding class="col-mobile">
+            <ion-item no-lines no-padding>
+              <ion-textarea formControlName="username"
+                            name="username"
+                            type="text" spellcheck="false"
+                            autocapitalize="off"
+                            maxlength="400"
+                            placeholder="Enter description here (Max 400 character)">
+
+              </ion-textarea>
+            </ion-item>
+
+          </ion-col>
+        </ion-row>
+
+
+      </div>
+
+
+      <div padding-right padding-left margin-top class="btn-login">
+        <button (click)="nextOnClick()" ion-button block round icon-right type="submit" color="secondary">
+          {{'NEXT' | translate}}
+        </button>
+      </div>
+
+
+    </form>
+
+
+  </ion-row>
+
+  <ion-fab bottom right>
+    <button ion-fab icon-only (click)="liveSupportOnClick()">
+      <ion-icon name="md-chatbubbles"></ion-icon>
+    </button>
+  </ion-fab>
+
 
 </ion-content>

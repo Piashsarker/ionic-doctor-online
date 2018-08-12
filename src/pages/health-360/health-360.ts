@@ -1,10 +1,9 @@
 import {Component} from '@angular/core';
 import {IonicPage, NavController, NavParams} from 'ionic-angular';
 import {FormBuilder, FormGroup} from "@angular/forms";
-import {PageChat} from "../Page";
 
 /**
- * Generated class for the TextConsultationPage page.
+ * Generated class for the Health_360Page page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -12,10 +11,10 @@ import {PageChat} from "../Page";
 
 @IonicPage()
 @Component({
-  selector: 'page-text-consultation',
-  templateUrl: 'text-consultation.html',
+  selector: 'page-health-360',
+  templateUrl: 'health-360.html',
 })
-export class TextConsultationPage {
+export class Health_360Page {
 
   private form: FormGroup;
 
@@ -23,19 +22,12 @@ export class TextConsultationPage {
     this.buildForm();
   }
 
-  nextOnClick() {
-
-  }
-
-  liveSupportOnClick() {
-    this.navCtrl.push(PageChat)
-  }
-
   private buildForm() {
 
     this.form = this.formBuilder.group({
-      username: ['']
+      password: ['']
     });
 
   }
+
 }

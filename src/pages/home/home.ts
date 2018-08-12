@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
 import {App, IonicPage, NavController, NavParams} from 'ionic-angular';
 import {TrendingInterface} from "../../components/trending/trending";
-import {PageLabTest, PageTextConsultation, PageVideoConsultation} from "../Page";
+import {PageHealth360, PageLabTest, PageTextConsultation, PageVideoConsultation} from "../Page";
 
 
 export interface HealthServices {
@@ -93,7 +93,9 @@ export class HomePage {
   }
 
   informationOnClick(services: HealthServices) {
-
+    if (services.id == HealthInformationEnum.HEALTH_360_ID) {
+      this.app.getRootNav().push(PageHealth360);
+    }
   }
 
   trendingClick($event: TrendingInterface) {
