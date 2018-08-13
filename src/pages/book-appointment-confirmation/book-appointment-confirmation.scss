@@ -1,0 +1,39 @@
+page-book-appointment-confirmation {
+
+  .grid {
+    justify-content: center;
+    height: 100%;
+    .card {
+      border-radius: 10px;
+      .card-top-icon {
+        width: 90px;
+        margin-right: auto;
+        margin-left: auto;
+      }
+
+      .div-top {
+        padding: 20px;
+        background: #a6d84d; /* fallback for old browsers */
+        background: -webkit-linear-gradient(to bottom, #a6d84d, #5e9c1b); /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to bottom, #5e9c1b, #a6d84d); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+      }
+
+      .lbl-title {
+        text-align: center;
+        font-size: 15px;
+        color: #3c560c;
+        font-weight: 100;
+        margin-top: 10px;
+      }
+      .lbl-value {
+        text-align: center;
+        font-size: 30px;
+        color: #464646;
+
+      }
+
+    }
+  }
+
+}

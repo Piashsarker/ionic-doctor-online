@@ -1,4 +1,3 @@
-
 export const PageLanguageSelect: string = 'LanguageSelectPage';
 export const PageIntroPage: string = 'IntroPage';
 export const PageLogin: string = 'LoginPage';
@@ -15,6 +14,11 @@ export const PageTextConsultation: string = 'TextConsultationPage';
 export const PageVideoConsultationResult: string = 'VideoConsultationResultPage';
 export const PageChat: string = 'ChatPage';
 export const PageHealth360: string = 'Health_360Page';
+export const PageBookAppointment: string = 'BookAppointmentPage';
+export const PageBookAppointmentConfirmation: string = 'BookAppointmentConfirmationPage';
+export const PageBookAppointmentConfirmationDetails: string = 'BookAppointmentConfirmationDetailsPage';
+
+
 
 
 

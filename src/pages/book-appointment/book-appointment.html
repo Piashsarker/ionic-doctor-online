@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-navbar color="secondary">
+    <ion-title>{{ 'Book Appointment' | translate }}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card class="card-calender">
+    <ion-calendar [(ngModel)]="date"
+                  (onChange)="onDateSelected($event)"
+                  type="string"
+                  format="YYYY-MM-DD"
+                  [options]="calenderOptions">
+    </ion-calendar>
+  </ion-card>
+
+
+  <ion-card class="card-time-schedule" *ngIf="appointmentAvailable">
+
+    <ion-segment color="primary" (ionChange)="shiftSelected($event)" [ngModel]="appointmentShifts[0].id">
+
+      <ion-segment-button *ngFor="let shift of appointmentShifts" [value]="shift.id">
+        {{shift.shiftName}}
+      </ion-segment-button>
+
+    </ion-segment>
+
+
+    <ion-row>
+      <ion-col col-4 *ngFor="let time of selectedShiftTime">
+        <button ion-button outline round color="secondary" (click)="timeOnClick(time)">
+          {{time}}
+        </button>
+      </ion-col>
+    </ion-row>
+
+
+  </ion-card>
+
+
+</ion-content>

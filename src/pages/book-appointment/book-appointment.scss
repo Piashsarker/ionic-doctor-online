@@ -1,0 +1,14 @@
+page-book-appointment {
+
+  .scroll-content {
+    background: #ebebeb;
+    .card-calender {
+      @extend %card-style;
+    }
+    .card-time-schedule {
+      @extend %card-style;
+    }
+
+  }
+
+}

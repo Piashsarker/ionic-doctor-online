@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 import {IonicPage, NavController, NavParams} from 'ionic-angular';
-import {PageChat} from "../Page";
+import {PageBookAppointment, PageChat} from "../Page";
+import {DoctorsProfileInterface} from "../../model/DoctorsProfile";
 
 /**
  * Generated class for the VideoConsultationResultPage page.
@@ -16,6 +17,56 @@ import {PageChat} from "../Page";
 })
 export class VideoConsultationResultPage {
 
+  doctorProfiles: Array<DoctorsProfileInterface> = [
+    {
+      id: "1",
+      name: "Nadim Mahmud",
+      fee_per_hour: "300",
+      image: "assets/icon/doctor_speak.svg",
+      specialist: "Pulmonologist, Allergist/ Immunologist",
+      designation: "MBBS MD (Tuberculosis & Chest Diseases)",
+      experience: "28 Years of Experience",
+      speaking: "Speaks: English, Hindi, Bangla",
+      specialized_in: " Interventional Pulmonology, Sleep Medicine , Snoring , Bronchoscopy, Thoracoscopy, Allergy Tsing , Sleep Lab, Ebus(Linexy & Radial), CRYO therapy."
+    },
+    {
+      id: "1",
+      name: "Nadim Mahmud",
+      fee_per_hour: "300",
+      image: "assets/icon/doctor_speak.svg",
+      specialist: "Pulmonologist, Allergist/ Immunologist",
+      designation: "MBBS MD (Tuberculosis & Chest Diseases)",
+      experience: "28 Years of Experience",
+      speaking: "Speaks: English, Hindi, Bangla",
+      specialized_in: " Interventional Pulmonology, Sleep Medicine , Snoring , Bronchoscopy, Thoracoscopy, Allergy Tsing , Sleep Lab, Ebus(Linexy & Radial), CRYO therapy."
+    },
+    {
+      id: "1",
+      name: "Nadim Mahmud",
+      fee_per_hour: "400",
+      image: "assets/icon/doctor_speak.svg",
+      specialist: "Pulmonologist, Allergist/ Immunologist",
+      designation: "MBBS MD (Tuberculosis & Chest Diseases)",
+      experience: "28 Years of Experience",
+      speaking: "Speaks: English, Hindi, Bangla",
+      specialized_in: " Interventional Pulmonology, Sleep Medicine , Snoring , Bronchoscopy, Thoracoscopy, Allergy Tsing , Sleep Lab, Ebus(Linexy & Radial), CRYO therapy."
+    },
+    {
+      id: "1",
+      name: "Nadim Mahmud",
+      fee_per_hour: "500",
+      image: "assets/icon/doctor_speak.svg",
+      specialist: "Pulmonologist, Allergist/ Immunologist",
+      designation: "MBBS MD (Tuberculosis & Chest Diseases)",
+      experience: "28 Years of Experience",
+      speaking: "Speaks: English, Hindi, Bangla",
+      specialized_in: " Interventional Pulmonology, Sleep Medicine , Snoring , Bronchoscopy, Thoracoscopy, Allergy Tsing , Sleep Lab, Ebus(Linexy & Radial), CRYO therapy."
+    }
+
+
+  ];
+
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
@@ -27,4 +78,7 @@ export class VideoConsultationResultPage {
     this.navCtrl.push(PageChat);
   }
 
+  bookNowOnClick(profile: DoctorsProfileInterface) {
+    this.navCtrl.push(PageBookAppointment);
+  }
 }
