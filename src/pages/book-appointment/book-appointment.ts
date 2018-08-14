@@ -3,6 +3,8 @@ import {IonicPage, ModalController, NavController, NavParams} from 'ionic-angula
 import {CalendarComponentOptions} from "ion2-calendar";
 import {AppointmentScheduleInterface} from "../../model/AppointmentSchedule";
 import {PageBookAppointmentConfirmation, PageBookAppointmentConfirmationDetails} from "../Page";
+import {DoctorsProfileInterface} from "../../model/DoctorsProfile";
+import {AppointmentInterface, AppointmentType} from "../../model/Appointment";
 
 /**
  * Generated class for the BookAppointmentPage page.
@@ -25,9 +27,11 @@ export class BookAppointmentPage {
   };
   appointmentAvailable: boolean = false;
   selectedShiftTime: Array<String>;
-
   selectedDate: string;
   selectedTime: string;
+
+  doctorProfile: DoctorsProfileInterface;
+
 
   appointmentShifts: Array<AppointmentScheduleInterface> = [
     {id: "1", shiftName: "Evening", availableTime: ["6.00 PM ", "6.30 PM ", "7.00 PM ", "8.30 PM"]},
@@ -39,6 +43,11 @@ export class BookAppointmentPage {
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
               public modalController: ModalController) {
+
+    if (this.navParams.data != undefined) {
+      this.doctorProfile = this.navParams.data;
+    }
+
 
   }
 
@@ -69,15 +78,23 @@ export class BookAppointmentPage {
   }
 
   private openConfirmatModal(selectedDate: string, selectedTime: string) {
+
+
+    let appointment: AppointmentInterface = {
+      doctorProfile: this.doctorProfile, appointment_time: selectedTime,
+      appointment_date: this.selectedDate, appointment_type: AppointmentType.VIDEO_CONSULTATION
+    };
+
     let confirmModal = this.modalController.create(PageBookAppointmentConfirmation, {
       date: selectedDate,
       time: selectedTime
     });
     confirmModal.present();
 
+
     confirmModal.onDidDismiss((data) => {
       if (data.confirm) {
-        this.navCtrl.push(PageBookAppointmentConfirmationDetails);
+        this.navCtrl.push(PageBookAppointmentConfirmationDetails, appointment);
       }
     });
   }

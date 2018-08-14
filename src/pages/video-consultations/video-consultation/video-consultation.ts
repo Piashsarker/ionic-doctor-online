@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
 import {IonicPage, NavController, NavParams} from 'ionic-angular';
-import {PageChat, PageVideoConsultationResult} from "../Page";
+import {PageChat, PageVideoConsultationResult} from "../../Page";
 
 /**
  * Generated class for the VideoConsultationPage page.

@@ -1,0 +1,19 @@
+page-video-consultation-result {
+  .scroll-content {
+    background: #ebebeb;
+
+    %search-lbl {
+      font-size: 13px;
+    }
+    .div-search-bar-text {
+      background: #ffffff;
+      .lbl-search {
+        @extend %search-lbl;
+      }
+      .lbl-search-result {
+        @extend %search-lbl;
+      }
+    }
+
+  }
+}

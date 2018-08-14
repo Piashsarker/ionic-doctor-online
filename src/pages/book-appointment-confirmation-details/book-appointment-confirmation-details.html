@@ -1,10 +1,20 @@
 <ion-header>
   <ion-navbar color="secondary">
-    <ion-title>{{ 'Book Appointment Details' | translate }}</ion-title>
+    <ion-title>{{ 'Book Appointment.ts Details' | translate }}</ion-title>
   </ion-navbar>
 </ion-header>
 
 
 <ion-content>
+
+  <div>
+    <doctor-profile-card [profile]="appointmentDetails.doctorProfile"></doctor-profile-card>
+  </div>
+
+
+  <live-support-fab>
+
+  </live-support-fab>
+
 
 </ion-content>

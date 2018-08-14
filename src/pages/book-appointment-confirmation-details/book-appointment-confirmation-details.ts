@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
 import {IonicPage, NavController, NavParams} from 'ionic-angular';
+import {AppointmentInterface} from "../../model/Appointment";
 
 /**
  * Generated class for the BookAppointmentConfirmationDetailsPage page.
@@ -15,7 +16,12 @@ import {IonicPage, NavController, NavParams} from 'ionic-angular';
 })
 export class BookAppointmentConfirmationDetailsPage {
 
+  appointmentDetails: AppointmentInterface;
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    if (this.navParams.data != undefined) {
+      this.appointmentDetails = this.navParams.data;
+    }
   }
 
   ionViewDidLoad() {

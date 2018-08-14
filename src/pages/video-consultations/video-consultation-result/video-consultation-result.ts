@@ -1,7 +1,6 @@
 import {Component} from '@angular/core';
 import {IonicPage, NavController, NavParams} from 'ionic-angular';
-import {PageBookAppointment, PageChat} from "../Page";
-import {DoctorsProfileInterface} from "../../model/DoctorsProfile";
+import {DoctorsProfileInterface} from "../../../model/DoctorsProfile";
 
 /**
  * Generated class for the VideoConsultationResultPage page.
@@ -74,11 +73,4 @@ export class VideoConsultationResultPage {
     console.log('ionViewDidLoad VideoConsultationResultPage');
   }
 
-  liveSupportOnClick() {
-    this.navCtrl.push(PageChat);
-  }
-
-  bookNowOnClick(profile: DoctorsProfileInterface) {
-    this.navCtrl.push(PageBookAppointment);
-  }
 }
