@@ -1,10 +1,10 @@
 import {Component} from '@angular/core';
 import {IonicPage, ModalController, NavController, NavParams} from 'ionic-angular';
 import {CalendarComponentOptions} from "ion2-calendar";
-import {AppointmentScheduleInterface} from "../../model/AppointmentSchedule";
-import {PageBookAppointmentConfirmation, PageBookAppointmentConfirmationDetails} from "../Page";
-import {DoctorsProfileInterface} from "../../model/DoctorsProfile";
-import {AppointmentInterface, AppointmentType} from "../../model/Appointment";
+import {AppointmentScheduleInterface} from "../../../model/AppointmentSchedule";
+import {PageBookAppointmentConfirmation, PageBookAppointmentConfirmationDetails} from "../../Page";
+import {DoctorsProfileInterface} from "../../../model/DoctorsProfile";
+import {AppointmentInterface, AppointmentType} from "../../../model/Appointment";
 
 /**
  * Generated class for the BookAppointmentPage page.

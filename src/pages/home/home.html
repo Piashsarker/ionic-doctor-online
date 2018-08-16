@@ -27,7 +27,7 @@
 
     <ion-row>
       <ion-col text-center *ngFor="let information of healthInformations" col-4>
-        <button ion-button clear large class="btn-service" no-padding (click)="informationOnClick(services)">
+        <button ion-button clear large class="btn-service" no-padding (click)="informationOnClick(information)">
           <div>
             <img class="img-service" [src]="information.img">
             <ion-label class="lbl-service">{{information.text}}</ion-label>
@@ -69,7 +69,7 @@
     <ion-row>
       <ion-col text-center *ngFor="let tool of healthTools" col-4>
         <ion-card>
-          <button ion-button clear large class="btn-service" no-padding (click)="informationOnClick(services)">
+          <button ion-button clear large class="btn-service" no-padding>
             <div>
               <img class="img-service" [src]="tool.img">
               <ion-label class="lbl-service" text-wrap>{{tool.text}}</ion-label>

@@ -17,6 +17,8 @@ export const PageHealth360: string = 'Health_360Page';
 export const PageBookAppointment: string = 'BookAppointmentPage';
 export const PageBookAppointmentConfirmation: string = 'BookAppointmentConfirmationPage';
 export const PageBookAppointmentConfirmationDetails: string = 'BookAppointmentConfirmationDetailsPage';
+export const PageHealth360ItemNews: string = 'Health_360ItemNewsPage';
+export const PageHealth360ItemNewsDetails: string = 'Health_360ItemNewsDetailsPage';
 
 
 

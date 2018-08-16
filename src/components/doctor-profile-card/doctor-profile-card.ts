@@ -10,6 +10,7 @@ import {NavController} from "ionic-angular";
 export class DoctorProfileCardComponent {
 
   @Input() profile: DoctorsProfileInterface;
+  @Input() enableButton: boolean = false;
   pageReady: boolean = false;
 
   constructor(public navCtrl: NavController) {

@@ -1,0 +1,18 @@
+<ion-header no-border>
+  <ion-navbar color="secondary">
+    <ion-title>{{ item.title | translate }}</ion-title>
+
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+
+  <ion-list>
+    <button ion-item *ngFor="let item of health360ItemNews" (click)="healthItemOnClick(item)">
+      <img [src]="item.img" item-start class="img-item">
+      <div text-wrap [innerHTML]="item.smallTitleHTML"></div>
+    </button>
+  </ion-list>
+
+</ion-content>

@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 import {IonicPage, NavController, NavParams} from 'ionic-angular';
-import {AppointmentInterface} from "../../model/Appointment";
+import {AppointmentInterface} from "../../../model/Appointment";
+import {FormBuilder, FormGroup} from "@angular/forms";
 
 /**
  * Generated class for the BookAppointmentConfirmationDetailsPage page.
@@ -18,14 +19,32 @@ export class BookAppointmentConfirmationDetailsPage {
 
   appointmentDetails: AppointmentInterface;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  private form: FormGroup;
+  private submitted: boolean;
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, public formBuilder: FormBuilder) {
     if (this.navParams.data != undefined) {
       this.appointmentDetails = this.navParams.data;
     }
+    this.buildForm();
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad BookAppointmentConfirmationDetailsPage');
+
+  validatePasswordAction() {
+    this.submitted = true;
+    if (!this.form.valid) {
+      this.submitted = false;
+      return false;
+    }
+
+
   }
 
+  private buildForm() {
+
+    this.form = this.formBuilder.group({
+      promo: ['']
+    });
+
+  }
 }

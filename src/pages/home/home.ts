@@ -29,7 +29,6 @@ enum HealthToolsEnum {
 }
 
 
-
 @IonicPage()
 @Component({
   selector: 'page-home',
@@ -76,6 +75,9 @@ export class HomePage {
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
               public app: App) {
+
+
+    console.log(this.healthInformations);
 
   }
 
