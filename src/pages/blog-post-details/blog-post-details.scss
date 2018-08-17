@@ -1,0 +1,43 @@
+page-blog-post-details {
+
+  .scroll-content {
+    background: #ebebeb;
+    .row-iframe {
+      .top-img {
+        width: 100%;
+        height: 200px;
+        background-size: cover;
+        background-position: 50% 50%;
+      }
+    }
+
+    .div-text {
+      margin: 10px;
+      .lbl-title {
+        margin: 0 0 3px 0;
+        font-size: 12px;
+      }
+      .lbl-description {
+
+        margin: 0;
+        font-size: 11px;
+        color: #3e3e3e;
+      }
+      .lbl-published-date {
+        margin: 0;
+        font-size: 10px;
+        color: #434343;
+      }
+      hr {
+        margin: 5px 0 5px 0;
+      }
+    }
+    .div-blog-container {
+      height: 100%;
+      margin: 10px;
+
+    }
+
+  }
+
+}

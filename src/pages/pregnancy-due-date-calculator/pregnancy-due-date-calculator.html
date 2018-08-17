@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-navbar color="secondary">
+    <ion-title>{{ 'Pregnancy Due Date Calculator' | translate }}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-row>
+    <ion-col text-center>
+      <ion-label class="lbl-header" text-wrap> Select first day of your last menstrual period</ion-label>
+    </ion-col>
+  </ion-row>
+
+  <ion-card class="card-calender">
+    <ion-calendar [(ngModel)]="date"
+                  (onChange)="onDateSelected($event)"
+                  type="string"
+                  format="DD MMM YYYY"
+                  [options]="calenderOptions">
+    </ion-calendar>
+  </ion-card>
+
+
+  <div *ngIf="selectedDate">
+    <ion-row>
+      <ion-col text-center>
+        <ion-label class="lbl-header" text-wrap> Select Average Cycle Duration</ion-label>
+      </ion-col>
+    </ion-row>
+
+    <ion-card class="card-time-schedule">
+
+
+      <ion-row>
+        <ion-col col-3 *ngFor="let time of getAverageCycleDuration()">
+          <button ion-button outline round color="secondary" (click)="durationOnClick(time)">
+            {{time.time}}
+          </button>
+        </ion-col>
+      </ion-row>
+
+
+    </ion-card>
+  </div>
+
+
+</ion-content>

@@ -1,6 +1,6 @@
 <ion-header no-border>
   <ion-navbar color="secondary">
-    <ion-title>{{ 'Lab Test' | translate }}</ion-title>
+    <ion-title>{{ 'BMI CALCULATOR' | translate }}</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -8,10 +8,10 @@
   <ion-grid padding>
 
 
-    <ion-row class="row-img" margin-top><img class="top-icon" src="assets/icon/lab_test.svg"></ion-row>
+    <ion-row class="row-img" margin-top><img class="top-icon" src="assets/icon/bmi_calculator.svg"></ion-row>
     <ion-row class="row-title" margin-bottom>
       <ion-col text-center>
-        <p class="top-title">{{'Enter your area pin code to get nearby lab.' | translate}}</p>
+        <p class="top-title">{{'Enter your height and weight for BMI calculation.' | translate}}</p>
       </ion-col>
     </ion-row>
 
@@ -25,17 +25,17 @@
 
           <ion-row class="row-mobile" no-padding>
             <ion-col no-padding col-2 text-center align-self-center class="country_code">
-              <ion-icon name="md-home" class="icon-email" color="secondary"></ion-icon>
+              <ion-icon name="md-body" class="icon-email" color="secondary"></ion-icon>
             </ion-col>
 
             <ion-col no-padding col-10 class="col-mobile">
               <ion-item no-lines no-padding>
-                <ion-input formControlName="pincode"
-                           name="pincode"
-                           type="text" spellcheck="false"
+                <ion-input formControlName="height"
+                           name="height"
+                           type="number" spellcheck="false"
                            autocapitalize="off"
                            maxlength="40"
-                           placeholder="Enter Area Pin code"
+                           placeholder="Enter height in CM"
                            clearInput clearOnEdit="false">
 
                 </ion-input>
@@ -51,17 +51,17 @@
 
           <ion-row class="row-mobile" no-padding>
             <ion-col no-padding col-2 text-center align-self-center class="country_code">
-              <ion-icon name="md-flask" class="icon-email" color="secondary"></ion-icon>
+              <ion-icon name="md-speedometer" class="icon-email" color="secondary"></ion-icon>
             </ion-col>
 
             <ion-col no-padding col-10 class="col-mobile">
               <ion-item no-lines no-padding>
-                <ion-input formControlName="lab_test"
-                           name="lab_test"
-                           type="text" spellcheck="false"
+                <ion-input formControlName="weight"
+                           name="weight"
+                           type="number" spellcheck="false"
                            autocapitalize="off"
                            maxlength="40"
-                           placeholder="Enter Test Name"
+                           placeholder="Enter weight  KG"
                            clearInput clearOnEdit="false">
 
                 </ion-input>

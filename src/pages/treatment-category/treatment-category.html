@@ -1,6 +1,6 @@
 <ion-header no-border>
   <ion-navbar color="secondary">
-    <ion-title> {{ 'Health 360&deg;'}}</ion-title>
+    <ion-title> {{options.text}}</ion-title>
 
   </ion-navbar>
 </ion-header>
@@ -22,15 +22,14 @@
 
           <ion-col no-padding col-8 class="col-mobile">
             <ion-item no-padding no-lines>
-              <ion-input #password formControlName="password"
-                         name="password" clearInput
+              <ion-input #password formControlName="search"
+                         name="search" clearInput
                          clearOnEdit="false"
                          spellcheck="false"
                          type="text"
                          autocapitalize="off"
                          maxlength="30"
-                         placeholder="Search"
-                         [class.invalid]="!form.controls.password.valid && (submitted)">
+                         placeholder="search">
               </ion-input>
 
             </ion-item>
@@ -49,7 +48,7 @@
     </form>
 
     <ion-list>
-      <button ion-item *ngFor="let item of health360Items" (click)="healthItemOnClick(item)">
+      <button ion-item *ngFor="let item of items" (click)="healthItemOnClick(item)">
         <ion-icon [name]="item.icon" item-start color="primary"></ion-icon>
         <ion-label text-wrap color="dark_light">{{item.title}}</ion-label>
         <ion-icon *ngIf="item.forwardIcon" item-end name="ios-arrow-forward-outline" color="dark_light"></ion-icon>

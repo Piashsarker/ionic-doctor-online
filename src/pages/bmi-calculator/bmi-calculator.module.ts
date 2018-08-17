@@ -1,16 +1,16 @@
 import {NgModule} from '@angular/core';
 import {IonicPageModule} from 'ionic-angular';
-import {Health_360Page} from './health-360';
+import {BmiCalculatorPage} from './bmi-calculator';
 import {TranslateModule} from "@ngx-translate/core";
 
 @NgModule({
   declarations: [
-    Health_360Page,
+    BmiCalculatorPage,
   ],
   imports: [
-    IonicPageModule.forChild(Health_360Page),
+    IonicPageModule.forChild(BmiCalculatorPage),
     TranslateModule.forChild()
   ],
 })
-export class Health_360PageModule {
+export class BmiCalculatorPageModule {
 }

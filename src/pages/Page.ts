@@ -1,3 +1,5 @@
+import {PregnancyDueDateCalculatorPage} from "./pregnancy-due-date-calculator/pregnancy-due-date-calculator";
+
 export const PageLanguageSelect: string = 'LanguageSelectPage';
 export const PageIntroPage: string = 'IntroPage';
 export const PageLogin: string = 'LoginPage';
@@ -13,12 +15,16 @@ export const PageVideoConsultation: string = 'VideoConsultationPage';
 export const PageTextConsultation: string = 'TextConsultationPage';
 export const PageVideoConsultationResult: string = 'VideoConsultationResultPage';
 export const PageChat: string = 'ChatPage';
-export const PageHealth360: string = 'Health_360Page';
 export const PageBookAppointment: string = 'BookAppointmentPage';
 export const PageBookAppointmentConfirmation: string = 'BookAppointmentConfirmationPage';
 export const PageBookAppointmentConfirmationDetails: string = 'BookAppointmentConfirmationDetailsPage';
-export const PageHealth360ItemNews: string = 'Health_360ItemNewsPage';
-export const PageHealth360ItemNewsDetails: string = 'Health_360ItemNewsDetailsPage';
+export const PageTreatmentCategory: string = 'TreatmentCategoryPage';
+export const PageTreatmentCategoryPost: string = 'TreatmentCategoryPostPage';
+export const PageBlogPostDetails: string = 'BlogPostDetailsPage';
+export const PageDiseasesAZ: string = 'DiseasesAzPage';
+export const PageBMICalculator: string = 'BmiCalculatorPage';
+export const PageOvulationCalender: string = 'OvulationCalenderPage';
+export const PagePregnancyDueDateCalculator: string = 'PregnancyDueDateCalculatorPage';
 
 
 

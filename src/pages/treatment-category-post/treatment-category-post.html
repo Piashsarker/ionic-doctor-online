@@ -1,0 +1,31 @@
+<ion-header no-border>
+  <ion-navbar color="secondary">
+    <ion-title>{{ item.title | translate }}</ion-title>
+
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+
+  <ion-list>
+    <button no-lines ion-item *ngFor="let item of health360ItemNews" (click)="healthItemOnClick(item)">
+
+      <div item-start class="img-item" [style.backgroundImage]="'url(' + item.img + ')'">
+        <ion-row style="height: 100%; align-items: center" justify-content-center>
+          <ion-icon *ngIf="item.videoURL" name="logo-youtube" color="youtube" class="icon-youtube"></ion-icon>
+        </ion-row>
+
+      </div>
+
+      <div item-end class="div-text">
+        <ion-label text-wrap class="lbl-title">{{item.title}}</ion-label>
+        <ion-label text-wrap class="lbl-description">{{item.smallDescription}}</ion-label>
+        <hr>
+        <ion-label text-wrap class="lbl-published-date">DAKTAR ONLINE EDITORIAL | PUBLISHED ON: {{item.publishedDate}}
+        </ion-label>
+      </div>
+    </button>
+  </ion-list>
+
+</ion-content>

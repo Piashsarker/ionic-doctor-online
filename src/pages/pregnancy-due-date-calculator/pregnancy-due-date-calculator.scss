@@ -1,0 +1,27 @@
+page-pregnancy-due-date-calculator {
+  .scroll-content {
+    background: #a6d84d; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #a6d84d, #5e9c1b); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #5e9c1b, #a6d84d); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    .lbl-header {
+      background: color($colors, secondary, base);
+      padding: 10px;
+      font-size: 18px;
+      color: white;
+      font-family: serif;
+      font-weight: bold;
+      margin: 10px 0 0 0;
+      border-radius: 5px;
+
+    }
+
+    .card-calender {
+      @extend %card-style;
+    }
+    .card-time-schedule {
+      @extend %card-style;
+    }
+
+  }
+}

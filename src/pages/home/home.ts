@@ -1,7 +1,19 @@
 import {Component} from '@angular/core';
 import {App, IonicPage, NavController, NavParams} from 'ionic-angular';
 import {TrendingInterface} from "../../components/trending/trending";
-import {PageHealth360, PageLabTest, PageTextConsultation, PageVideoConsultation} from "../Page";
+import {
+  PageBlogPostDetails,
+  PageBMICalculator,
+  PageDiseasesAZ,
+  PageLabTest,
+  PageOvulationCalender,
+  PagePregnancyDueDateCalculator,
+  PageTextConsultation,
+  PageTreatmentCategory,
+  PageVideoConsultation
+} from "../Page";
+import {htmlDemoText} from "../../providers/Constant";
+import {BlogPostInterface} from "../../model/BlogPost";
 
 
 export interface HealthServices {
@@ -18,8 +30,8 @@ enum HealthServiceEnum {
 
 enum HealthInformationEnum {
   HEALTH_360_ID = 1,
-  DOC_SPEAK_ID,
-  DIEASES_AZ_ID
+  DOC_SPEAK_ID = 2,
+  DIEASES_AZ_ID = 3
 }
 
 enum HealthToolsEnum {
@@ -35,6 +47,14 @@ enum HealthToolsEnum {
   templateUrl: 'home.html',
 })
 export class HomePage {
+
+  blogPost: BlogPostInterface = {
+    id: 1, img: 'assets/imgs/sample_3.jpg', title: "Night Blindness | Do You Go Blind At Night?",
+    smallDescription: "Night Blindness is a condition wherein a person is unable to see at night or poor light. " +
+    "It is not a condition or disease by itself but is rather a symptom of some other underlying eye problem.",
+    publishedDate: "27 Jan 2018 11.25am",
+    descriptionHTML: htmlDemoText
+  };
 
   healthServices: Array<HealthServices> = [{
     id: HealthServiceEnum.VIDEO_CONSULTATION_ID,
@@ -53,10 +73,26 @@ export class HomePage {
     {id: HealthInformationEnum.DIEASES_AZ_ID, text: 'Diseases A-Z', img: 'assets/icon/dieases.svg'}];
 
   trendings: Array<TrendingInterface> = [{
-    id: '1', title: 'A title goes here', type: 'text_post', imageUrl: 'assets/imgs/sample_4.jpg'
+    id: '1',
+    title: 'A title goes here',
+    type: 'text_post',
+    imageUrl: 'assets/imgs/sample_4.jpg',
+    blogPost: this.blogPost
   },
-    {id: '1', title: 'A title goes here', type: 'video_post', imageUrl: 'assets/imgs/sample_4.jpg'},
-    {id: '1', title: 'A title goes here', type: 'video_post', imageUrl: 'assets/imgs/sample_4.jpg'}];
+    {
+      id: '1',
+      title: 'A title goes here',
+      type: 'video_post',
+      imageUrl: 'assets/imgs/sample_4.jpg',
+      blogPost: this.blogPost
+    },
+    {
+      id: '1',
+      title: 'A title goes here',
+      type: 'video_post',
+      imageUrl: 'assets/imgs/sample_4.jpg',
+      blogPost: this.blogPost
+    }];
 
 
   healthTools: Array<HealthServices> = [{
@@ -95,12 +131,30 @@ export class HomePage {
   }
 
   informationOnClick(services: HealthServices) {
-    if (services.id == HealthInformationEnum.HEALTH_360_ID) {
-      this.app.getRootNav().push(PageHealth360);
+    console.log(services);
+    if (services.id == HealthInformationEnum.HEALTH_360_ID || services.id == HealthInformationEnum.DOC_SPEAK_ID) {
+      this.app.getRootNav().push(PageTreatmentCategory, services);
     }
+    if (services.id == HealthInformationEnum.DIEASES_AZ_ID) {
+      this.app.getRootNav().push(PageDiseasesAZ, services);
+    }
+
+
   }
 
-  trendingClick($event: TrendingInterface) {
-    console.log($event);
+  trendingClick(trending: TrendingInterface) {
+    this.app.getRootNav().push(PageBlogPostDetails, trending.blogPost);
+  }
+
+  btnHealthToolOnClick(tool: HealthServices) {
+    if (tool.id == HealthToolsEnum.BMI_CALCULATOR_ID) {
+      this.app.getRootNav().push(PageBMICalculator);
+    }
+    if (tool.id == HealthToolsEnum.OVULATION_CALENDER_ID) {
+      this.app.getRootNav().push(PageOvulationCalender);
+    }
+    if (tool.id == HealthToolsEnum.PREGNANCY_DUE_DATE_CALCULATOR_ID) {
+      this.app.getRootNav().push(PagePregnancyDueDateCalculator);
+    }
   }
 }

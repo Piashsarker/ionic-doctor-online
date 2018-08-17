@@ -1,0 +1,36 @@
+<ion-header no-border>
+  <ion-navbar color="secondary">
+    <ion-title>{{'Diseases A-Z'}}</ion-title>
+
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+
+  <ion-grid *ngIf="diseasesList.length==0" class="empty_notification_grid">
+
+    <ion-row align-items-center>
+
+      <ion-col align-self-center text-center>
+        <ion-icon name="notifications-off"></ion-icon>
+        <ion-label>No Diseases Available</ion-label>
+      </ion-col>
+
+    </ion-row>
+
+  </ion-grid>
+
+
+  <div class="notification-div">
+    <ion-list>
+      <button ion-item *ngFor="let item of diseasesList" (click)="diseasesOnClick(item)">
+        <ion-label text-wrap class="lbl-title">{{item.diseasesName}}</ion-label>
+        <ion-icon item-end name="ios-arrow-forward-outline"></ion-icon>
+      </button>
+    </ion-list>
+
+  </div>
+
+
+</ion-content>

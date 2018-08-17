@@ -1,16 +1,16 @@
 import {NgModule} from '@angular/core';
 import {IonicPageModule} from 'ionic-angular';
-import {Health_360ItemNewsPage} from './health-360-item-news';
+import {TreatmentCategoryPostPage} from './treatment-category-post';
 import {TranslateModule} from "@ngx-translate/core";
 
 @NgModule({
   declarations: [
-    Health_360ItemNewsPage,
+    TreatmentCategoryPostPage,
   ],
   imports: [
-    IonicPageModule.forChild(Health_360ItemNewsPage),
+    IonicPageModule.forChild(TreatmentCategoryPostPage),
     TranslateModule.forChild()
   ],
 })
-export class Health_360ItemNewsPageModule {
+export class TreatmentCategoryPostPageModule {
 }

@@ -1,4 +1,5 @@
 import {Component, EventEmitter, Input, Output} from '@angular/core';
+import {BlogPostInterface} from "../../model/BlogPost";
 
 
 export interface TrendingInterface {
@@ -7,7 +8,8 @@ export interface TrendingInterface {
   type?: string,
   imageUrl?: string,
   videoUrl?: string,
-  descriptionHtml?: string
+  descriptionHtml?: string,
+  blogPost?: BlogPostInterface,
 }
 
 
