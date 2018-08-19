@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 import {IonicPage, NavController, NavParams} from 'ionic-angular';
 import {FormBuilder, FormGroup} from "@angular/forms";
+import {PageTextConsultationBooking} from "../../Page";
 
 /**
  * Generated class for the PatientDetailsPage page.
@@ -30,6 +31,8 @@ export class PatientDetailsPage {
 
 
   validatePasswordAction() {
+
+    this.navCtrl.push(PageTextConsultationBooking);
     this.submitted = true;
     if (!this.form.valid) {
       this.submitted = false;

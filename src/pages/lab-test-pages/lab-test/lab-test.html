@@ -1,6 +1,12 @@
 <ion-header no-border>
   <ion-navbar color="secondary">
     <ion-title>{{ 'Lab Test' | translate }}</ion-title>
+
+    <ion-buttons end>
+      <button ion-button icon-only (click)="openCartPage()">
+        <ion-icon color="white" name="md-cart"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 

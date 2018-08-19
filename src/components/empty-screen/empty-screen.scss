@@ -1,0 +1,25 @@
+empty-screen {
+  .grid-center {
+    height: 100%;
+    justify-content: center;
+    background: #ebebeb;
+    .row-center {
+      align-self: center;
+      color: #393939;
+      .icon {
+        font-size: 50px;
+      }
+      .top-image {
+        height: 80px;
+      }
+      .lbl-title {
+        font-size: 20px;
+      }
+      .lbl-description {
+        font-size: 16px;
+        margin-top: 4px;
+      }
+    }
+
+  }
+}

@@ -1,13 +1,14 @@
-page-patient-details {
-
+page-text-consultation-booking {
   .scroll-content {
     background: #ebebeb;
-    .card-patient-information {
+    .card-consultation-details {
       border-radius: 5px;
 
       .lbl-promo {
         color: color($colors, secondary, base);
         font-weight: 300;
+        margin: 20px 0 20px 0;
+        padding: 0;
       }
 
       .lbl-checkbox {
@@ -17,7 +18,7 @@ page-patient-details {
       }
       .checkbox {
         margin: 0 10px 0 0;
-        color: color($colors, secondary, base);
+        color: color($colors, dark, base);
       }
 
       .card-header {
@@ -43,7 +44,7 @@ page-patient-details {
             font-size: 14px;
           }
           .lbl-value {
-            font-weight: bold;
+
           }
 
         }
@@ -77,17 +78,6 @@ page-patient-details {
             color: #FFFFFF;
           }
 
-          .select {
-            max-width: 100%;
-            width: 100%;
-            .select-icon {
-              height: 20px;
-              width: 20px;
-              border-radius: 10px;
-              background: #dbdbdb;
-            }
-          }
-
         }
         .text-input-ios {
           margin-left: 10px;
@@ -98,6 +88,6 @@ page-patient-details {
         margin-top: 30px;
       }
     }
-  }
 
+  }
 }

@@ -38,6 +38,10 @@ page-registration {
             background: #ffffff;
             border-top-right-radius: 4px;
             border-bottom-right-radius: 4px;
+            .item {
+              border-top-right-radius: 4px;
+              border-bottom-right-radius: 4px;
+            }
           }
           .icon-email {
             font-size: 30px;

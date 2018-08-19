@@ -1,0 +1,24 @@
+page-lab-test-cart {
+
+  .scroll-content {
+    background: #ebebeb;
+
+    .card {
+      border-radius: 5px;
+      padding: 0 10px 0 10px;
+      .card-header {
+      }
+      .details_title {
+        color: #828282;
+        font-size: 1.3rem;
+      }
+      .details_title_value {
+        margin-bottom: 15px;
+        margin-top: 5px;
+        font-size: 1.4rem;
+        color: #2d2d2d;
+      }
+    }
+  }
+
+}

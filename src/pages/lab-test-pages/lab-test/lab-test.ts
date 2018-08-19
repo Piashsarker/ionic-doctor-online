@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 import {IonicPage, NavController, NavParams} from 'ionic-angular';
 import {FormBuilder, FormGroup} from "@angular/forms";
+import {PageLabTestCart, PageLabTestResult} from "../../Page";
 
 /**
  * Generated class for the LabTestPage page.
@@ -29,6 +30,10 @@ export class LabTestPage {
 
 
   validatePasswordAction() {
+
+
+    this.navCtrl.push(PageLabTestResult);
+
     this.submitted = true;
     if (!this.form.valid) {
       this.submitted = false;
@@ -47,4 +52,7 @@ export class LabTestPage {
 
   }
 
+  openCartPage() {
+    this.navCtrl.push(PageLabTestCart);
+  }
 }

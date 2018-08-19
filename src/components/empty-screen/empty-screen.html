@@ -1,0 +1,18 @@
+<!-- Generated template for the EmptyScreenComponent component -->
+<ion-grid class="grid-center" *ngIf="pageReady">
+
+  <ion-row class="row-center">
+    <ion-icon *ngIf="options.icon" [name]="options.icon"></ion-icon>
+    <img class="top-image" *ngIf="options.img" [src]="options.img"/>
+  </ion-row>
+
+  <ion-row class="row-center">
+    <ion-label *ngIf="options.title" class="lbl-title">{{options.title}}</ion-label>
+  </ion-row>
+
+  <ion-row class="row-center">
+    <ion-label *ngIf="options.description" class="lbl-description">{{options.description}}</ion-label>
+  </ion-row>
+
+
+</ion-grid>

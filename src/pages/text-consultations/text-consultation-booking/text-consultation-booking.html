@@ -1,0 +1,94 @@
+<ion-header no-border>
+  <ion-navbar color="secondary">
+    <ion-title>{{ 'Text Consultation' | translate }}</ion-title>
+
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card class="card-consultation-details">
+    <ion-card-header text-uppercase><h3>Your Query</h3></ion-card-header>
+    <ion-list padding>
+      <ion-item no-lines>
+        <ion-label text-wrap item-right class="lbl-value">I am having so much pain in my body from neck to leg.
+          Sometimes the pain did arrive in leg and in beside the heart. Pain did long last in night.
+        </ion-label>
+      </ion-item>
+    </ion-list>
+
+
+    <ion-card-header text-uppercase><h3>Select Any Service</h3>
+    </ion-card-header>
+
+    <ion-row class="row-form">
+
+
+      <form [formGroup]="form" novalidate class="form-login">
+
+        <div class="div-input" margin>
+
+
+          <ion-row no-padding>
+            <ion-list radio-group>
+              <ion-item *ngFor="let service of textConsultationServices">
+                <ion-radio [value]="service.id" item-start></ion-radio>
+                <ion-label text-wrap>{{service.text}} <strong> {{service.amount}} BDT</strong></ion-label>
+              </ion-item>
+
+
+            </ion-list>
+
+          </ion-row>
+
+
+          <ion-label padding-top padding-left no-margin class="lbl-promo"> Have a promo code apply here!</ion-label>
+
+
+          <ion-row class="row-mobile" no-padding>
+            <ion-col no-padding col-2 text-center align-self-center class="country_code">
+              <ion-icon name="md-bulb" class="icon-email" color="secondary"></ion-icon>
+            </ion-col>
+            <ion-col no-padding col-10 class="col-mobile">
+              <ion-item no-lines no-padding>
+                <ion-input formControlName="promo"
+                           name="email"
+                           type="text" spellcheck="false"
+                           autocapitalize="off"
+                           maxlength="40"
+                           placeholder="Enter promo here"
+                           clearInput clearOnEdit="false">
+
+                </ion-input>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+
+
+          <ion-row no-padding>
+            <ion-item no-lines no-padding margin-top>
+              <ion-label text-wrap class="lbl-checkbox">Please agree the <a>terms and conditions</a> to proceed further
+              </ion-label>
+              <ion-checkbox></ion-checkbox>
+            </ion-item>
+          </ion-row>
+
+        </div>
+
+
+        <div padding-right padding-left margin-bottom class="btn-forgot">
+          <button (click)="validatePasswordAction()" ion-button block round icon-right type="submit" color="secondary">
+            {{'Submit' | translate}}
+          </button>
+        </div>
+
+
+      </form>
+
+
+    </ion-row>
+
+  </ion-card>
+
+
+</ion-content>

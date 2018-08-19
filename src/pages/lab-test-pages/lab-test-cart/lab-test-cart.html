@@ -1,0 +1,52 @@
+<ion-header no-border>
+  <ion-navbar color="secondary">
+    <ion-title>{{ 'Cart' | translate }}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+
+
+  <empty-screen [options]="emptyScreenOptions" *ngIf="!cartItems"></empty-screen>
+
+
+  <ion-card *ngFor="let test of cartItems">
+    <ion-card-header no-padding>
+      <ion-row>
+        <ion-col align-self-center><h2>{{test.name}}</h2></ion-col>
+        <button ion-button clear text-right icon-only>
+          <ion-icon name="md-trash"></ion-icon>
+        </button>
+
+      </ion-row>
+    </ion-card-header>
+
+    <ion-row>
+      <ion-col col-12>
+        <ion-row>
+          <h3 class="details_title" strong color="primary">{{ 'Lab Name' | translate }}</h3>
+        </ion-row>
+        <ion-row>
+          <h3 class="details_title_value" color="upay" text-capitalize>{{ test.lab_name }}</h3>
+        </ion-row>
+        <ion-row>
+          <h3 class="details_title" strong color="primary">{{ 'Current Price' | translate }}</h3>
+        </ion-row>
+        <ion-row>
+          <h3 class="details_title_value" color="upay">{{ test.current_price }}</h3>
+        </ion-row>
+        <ion-row>
+          <h3 class="details_title" strong color="primary">{{ 'Service Type' | translate }}</h3>
+        </ion-row>
+        <ion-row>
+          <h3 class="details_title_value" color="upay">{{ test.service_type }}</h3>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+
+
+  </ion-card>
+
+
+</ion-content>

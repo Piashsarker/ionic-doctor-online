@@ -1,0 +1,74 @@
+<ion-header no-border>
+  <ion-navbar color="secondary">
+    <ion-title>{{ 'Lab Tests' | translate }}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card *ngFor="let test of allTest">
+    <ion-card-header no-padding>
+      <ion-row>
+        <ion-col align-self-center><h2>{{test.name}}</h2></ion-col>
+        <button ion-button clear text-right>
+          <ion-label> ADD TO CART</ion-label>
+        </button>
+
+      </ion-row>
+    </ion-card-header>
+
+    <ion-row>
+      <ion-col col-12>
+        <ion-row>
+          <h3 class="details_title" strong color="primary">{{ 'Lab Name' | translate }}</h3>
+        </ion-row>
+        <ion-row>
+          <h3 class="details_title_value" color="upay" text-capitalize>{{ test.lab_name }}</h3>
+        </ion-row>
+        <ion-row>
+          <h3 class="details_title" strong color="primary">{{ 'Certified By' | translate }}</h3>
+        </ion-row>
+        <ion-row>
+          <h3 class="details_title_value" color="upay" text-capitalize>{{ test.certified_by }}</h3>
+        </ion-row>
+
+        <ion-row>
+          <ion-col col-6 no-padding>
+            <ion-row>
+              <h3 class="details_title" strong color="primary">{{ 'Previous Price' | translate }}</h3>
+            </ion-row>
+            <ion-row>
+              <h3 class="details_title_value" color="upay">{{ test.previous_price }}</h3>
+            </ion-row>
+          </ion-col>
+
+          <ion-col col-6 no-padding>
+            <ion-row>
+              <h3 class="details_title" strong color="primary">{{ 'Current Price' | translate }}</h3>
+            </ion-row>
+            <ion-row>
+              <h3 class="details_title_value" color="upay">{{ test.current_price }}</h3>
+            </ion-row>
+          </ion-col>
+        </ion-row>
+
+
+        <ion-row>
+          <h3 class="details_title" strong color="primary">{{ 'Service Type' | translate }}</h3>
+        </ion-row>
+        <ion-row>
+          <h3 class="details_title_value" color="upay">{{ test.service_type }}</h3>
+        </ion-row>
+        <ion-row>
+          <h3 class="details_title" strong color="primary">{{ 'Description' | translate }}</h3>
+        </ion-row>
+        <ion-row>
+          <h3 class="details_title_value" color="upay">{{ test.description }}</h3>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+
+
+  </ion-card>
+
+</ion-content>
