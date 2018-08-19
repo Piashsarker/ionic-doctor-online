@@ -6,11 +6,11 @@
     <ion-row class="row-top-header"><h2> Select Language</h2></ion-row>
 
 
-    <ion-row padding-top class="row-language" *ngFor="let language of languages" (click)="languageSelected(language)">
-
-      <img class="img-language" [src]="language.icon">
-      <label class="lbl-name" text-center>{{language.name}}</label>
-
+    <ion-row padding-top class="row-language" *ngFor="let language of languages">
+      <button clear ion-button (click)="languageSelected(language)">
+        <img class="img-language" [src]="language.icon">
+        <label class="lbl-name" text-center>{{language.name}}</label>
+      </button>
     </ion-row>
 
 

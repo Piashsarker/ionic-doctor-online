@@ -52,13 +52,7 @@ export class MyApp {
   }
 
   private performBackButtonAction() {
-    let nav = this.app.getActiveNav();
-    if (nav.canGoBack()) {
-      nav.pop();
-    }
-    else {
-      // Exit Dialog Here.
-    }
+    this.app.goBack();
   }
 }
 

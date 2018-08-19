@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
 import {IonicPage, NavController, NavParams} from 'ionic-angular';
 import {FormBuilder, FormGroup} from "@angular/forms";
-import {PageChat} from "../../Page";
+import {PageChat, PagePatientDetails} from "../../Page";
 
 /**
  * Generated class for the TextConsultationPage page.
@@ -24,7 +24,7 @@ export class TextConsultationPage {
   }
 
   nextOnClick() {
-
+    this.navCtrl.push(PagePatientDetails);
   }
 
   liveSupportOnClick() {

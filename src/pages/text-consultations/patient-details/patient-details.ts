@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
 import {IonicPage, NavController, NavParams} from 'ionic-angular';
+import {FormBuilder, FormGroup} from "@angular/forms";
 
 /**
  * Generated class for the PatientDetailsPage page.
@@ -15,11 +16,40 @@ import {IonicPage, NavController, NavParams} from 'ionic-angular';
 })
 export class PatientDetailsPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  genders: Array<{ id: string, title: string }> = [
+    {id: 'male', title: 'Male'},
+    {id: 'female', title: 'Female'},
+    {id: 'other', title: 'Other'}
+  ];
+  private form: FormGroup;
+  private submitted: boolean;
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, public formBuilder: FormBuilder) {
+    this.buildForm();
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad PatientDetailsPage');
+
+  validatePasswordAction() {
+    this.submitted = true;
+    if (!this.form.valid) {
+      this.submitted = false;
+      return false;
+    }
+
+
   }
 
+  private buildForm() {
+
+    this.form = this.formBuilder.group({
+      full_name: [''],
+      age: [''],
+      gender: [''],
+      weight: [''],
+      height: [''],
+      address: [''],
+      city: ['']
+    });
+
+  }
 }

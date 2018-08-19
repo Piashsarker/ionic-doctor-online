@@ -1,5 +1,3 @@
-import {PregnancyDueDateCalculatorPage} from "./pregnancy-due-date-calculator/pregnancy-due-date-calculator";
-
 export const PageLanguageSelect: string = 'LanguageSelectPage';
 export const PageIntroPage: string = 'IntroPage';
 export const PageLogin: string = 'LoginPage';
@@ -25,6 +23,7 @@ export const PageDiseasesAZ: string = 'DiseasesAzPage';
 export const PageBMICalculator: string = 'BmiCalculatorPage';
 export const PageOvulationCalender: string = 'OvulationCalenderPage';
 export const PagePregnancyDueDateCalculator: string = 'PregnancyDueDateCalculatorPage';
+export const PagePatientDetails: string = 'PatientDetailsPage';
 
 
 

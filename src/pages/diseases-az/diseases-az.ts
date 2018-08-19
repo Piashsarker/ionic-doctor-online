@@ -21,7 +21,7 @@ export class DiseasesAzPage {
 
 
   blogPost: BlogPostInterface = {
-    id: 1, img: 'assets/imgs/sample_3.jpg', title: "Night Blindness | Do You Go Blind At Night?",
+    id: 1, img: 'assets/imgs/sample_1.jpg', title: "Night Blindness | Do You Go Blind At Night?",
     smallDescription: "Night Blindness is a condition wherein a person is unable to see at night or poor light. " +
     "It is not a condition or disease by itself but is rather a symptom of some other underlying eye problem.",
     publishedDate: "27 Jan 2018 11.25am",

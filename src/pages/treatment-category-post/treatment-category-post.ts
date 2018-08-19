@@ -19,14 +19,14 @@ import {BlogPostInterface, PostType} from "../../model/BlogPost";
 export class TreatmentCategoryPostPage {
   item: BlogPostInterface;
   health360ItemNews: Array<BlogPostInterface> = [{
-    id: 1, img: 'assets/imgs/sample_3.jpg', title: "Night Blindness | Do You Go Blind At Night?",
+    id: 1, img: 'assets/imgs/sample_1.jpg', title: "Night Blindness | Do You Go Blind At Night?",
     smallDescription: "Night Blindness is a condition wherein a person is unable to see at night or poor light. " +
     "It is not a condition or disease by itself but is rather a symptom of some other underlying eye problem.",
     publishedDate: "27 Jan 2018 11.25am",
     descriptionHTML: htmlDemoText
   },
     {
-      id: 1, img: 'assets/imgs/sample_3.jpg', title: "Night Blindness | Do You Go Blind At Night?",
+      id: 1, img: 'assets/imgs/sample_1.jpg', title: "Night Blindness | Do You Go Blind At Night?",
       smallDescription: "Night Blindness is a condition wherein a person is unable to see at night or poor light. " +
       "It is not a condition or disease by itself but is rather a symptom of some other underlying eye problem.",
       publishedDate: "27 Jan 2018 11.25am",
@@ -35,7 +35,7 @@ export class TreatmentCategoryPostPage {
       videoURL: "https://www.youtube.com/embed/W3P3rT0j2gQ"
     },
     {
-      id: 1, img: 'assets/imgs/sample_3.jpg', title: "Night Blindness | Do You Go Blind At Night?",
+      id: 1, img: 'assets/imgs/sample_1.jpg', title: "Night Blindness | Do You Go Blind At Night?",
       smallDescription: "Night Blindness is a condition wherein a person is unable to see at night or poor light. " +
       "It is not a condition or disease by itself but is rather a symptom of some other underlying eye problem.",
       publishedDate: "27 Jan 2018 11.25am",
@@ -43,14 +43,14 @@ export class TreatmentCategoryPostPage {
     },
     {
       id: 1,
-      img: 'assets/imgs/sample_3.jpg', title: "Night Blindness | Do You Go Blind At Night?",
+      img: 'assets/imgs/sample_1.jpg', title: "Night Blindness | Do You Go Blind At Night?",
       smallDescription: "Night Blindness is a condition wherein a person is unable to see at night or poor light. " +
       "It is not a condition or disease by itself but is rather a symptom of some other underlying eye problem.",
       publishedDate: "27 Jan 2018 11.25am",
       descriptionHTML: htmlDemoText
     },
     {
-      id: 1, img: 'assets/imgs/sample_3.jpg', title: "Night Blindness | Do You Go Blind At Night?",
+      id: 1, img: 'assets/imgs/sample_1.jpg', title: "Night Blindness | Do You Go Blind At Night?",
       smallDescription: "Night Blindness is a condition wherein a person is unable to see at night or poor light. " +
       "It is not a condition or disease by itself but is rather a symptom of some other underlying eye problem.",
       publishedDate: "27 Jan 2018 11.25am",
@@ -59,14 +59,14 @@ export class TreatmentCategoryPostPage {
       videoURL: "https://www.youtube.com/embed/W3P3rT0j2gQ"
     },
     {
-      id: 1, img: 'assets/imgs/sample_3.jpg', title: "Night Blindness | Do You Go Blind At Night?",
+      id: 1, img: 'assets/imgs/sample_1.jpg', title: "Night Blindness | Do You Go Blind At Night?",
       smallDescription: "Night Blindness is a condition wherein a person is unable to see at night or poor light. " +
       "It is not a condition or disease by itself but is rather a symptom of some other underlying eye problem.",
       publishedDate: "27 Jan 2018 11.25am",
       descriptionHTML: htmlDemoText
     },
     {
-      id: 1, img: 'assets/imgs/sample_3.jpg', title: "Night Blindness | Do You Go Blind At Night?",
+      id: 1, img: 'assets/imgs/sample_1.jpg', title: "Night Blindness | Do You Go Blind At Night?",
       smallDescription: "Night Blindness is a condition wherein a person is unable to see at night or poor light. " +
       "It is not a condition or disease by itself but is rather a symptom of some other underlying eye problem.",
       publishedDate: "27 Jan 2018 11.25am",

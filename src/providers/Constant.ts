@@ -52,3 +52,4 @@ export const htmlDemoText: string = "<div class=\"w3-col m6 w3-padding-large\">\
   "  \n" +
   "<!-- End page content -->\n" +
   "</div>";
+
