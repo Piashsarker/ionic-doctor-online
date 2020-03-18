@@ -36,7 +36,6 @@ export class BookAppointmentPage {
   appointmentShifts: Array<AppointmentScheduleInterface> = [
     {id: "1", shiftName: "Evening", availableTime: ["6.00 PM ", "6.30 PM ", "7.00 PM ", "8.30 PM"]},
     {id: "2", shiftName: "Night", availableTime: ["9.00 PM ", "9.30 PM ", "10.00 PM ", "11.30 PM"]}
-
   ];
 
 
