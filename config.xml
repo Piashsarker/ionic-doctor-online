@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="piashsarker.com" version="0.0.1" xmlns="http://www.w3.org/ns/widgets">
-  <name>Daktar Online</name>
+    <name>Daktar Online</name>
     <description>An awesome Ionic/Cordova app.</description>
-  <author email="sarkerpt@gmail.com" href="http://ionicframework.com/">Piash Sarker</author>
+    <author email="sarkerpt@gmail.com" href="http://ionicframework.com/">Piash Sarker</author>
     <content src="index.html" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
@@ -81,5 +81,5 @@
     <plugin name="cordova-plugin-device" spec="1.1.4" />
     <plugin name="cordova-plugin-splashscreen" spec="~4.0.1" />
     <plugin name="cordova-plugin-ionic-webview" spec="^1.1.11" />
-  <engine name="android" spec="6.3.0"/>
+    <engine name="android" spec="6.3.0" />
 </widget>

@@ -1,5 +1,3 @@
-import {LabTestResultPage} from "./lab-test-pages/lab-test-result/lab-test-result";
-
 export const PageLanguageSelect: string = 'LanguageSelectPage';
 export const PageIntroPage: string = 'IntroPage';
 export const PageLogin: string = 'LoginPage';
