@@ -1,11 +1,35 @@
-# Doctor Online IONIC 3 Project
-## Free Template & Source Code ## 
+# Ionic Angular Doctor Online Projet
+
+This application is purely a kitchen-sink demo of the Ionic Framework and Angular.
+This project is just to show off Ionic components in a real-world application.
 
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=eYzkH9PanSc
 " target="_blank"><img src="http://img.youtube.com/vi/eYzkH9PanSc/0.jpg" 
-alt="Doctor Online IONIC Template" width="500" height="300" border="10" /></a>
+alt="IONIC Doctor Online Template" width="500" height="300" border="10" /></a>
 
-Below are some pages that this app include ####
+
+## Table of Contents
+- [Getting Started](#getting-started)
+- [Features or Pages ](#features-or-pages)
+- [App Preview](#app-preview)
+- [Deploying](#deploying)
+  - [Progressive Web App](#progressive-web-app)
+  - [Android](#android)
+  - [iOS](#ios)
+
+
+## Getting Started
+
+* [Download the installer](https://nodejs.org/) for Node LTS.
+* Install the ionic CLI globally: `npm install -g ionic`
+* Clone this repository: `git clone https://github.com/ionic-team/ionic-conference-app.git`.
+* Run `npm install` from the project root.
+* Run `ionic serve` in a terminal from the project root.
+* Profit. :tada:
+
+
+
+## Features or Pages 
  
 1. App Walkthrough Slider Page. 
 2. Login & Signup Page. 
@@ -16,6 +40,8 @@ Below are some pages that this app include ####
 7. Profile Page. 
 8. Blog Post with Share Actions Page. 
 9. Notification Page. 
+
+## App Preview
 
 
 <img src="https://github.com/Piashsarker/doctor-online-ionic/blob/master/screenshots/01_language.png" height="600" width="350">
@@ -54,6 +80,25 @@ Below are some pages that this app include ####
 <img src="https://github.com/Piashsarker/doctor-online-ionic/blob/master/screenshots/30_blog_post_details_video.png" height="600" width="350">
 <img src="https://github.com/Piashsarker/doctor-online-ionic/blob/master/screenshots/31_bmi_calculator.png" height="600" width="350">
 <img src="https://github.com/Piashsarker/doctor-online-ionic/blob/master/screenshots/32_pregnancy_calculator.png" height="600" width="350">
+
+
+
+## Deploying
+
+### Progressive Web App
+
+1. Un-comment [these lines](https://github.com/ionic-team/ionic2-app-base/blob/master/src/index.html#L21)
+2. Run `npm run ionic:build --prod`
+3. Push the `www` folder to your hosting service
+
+### Android
+
+1. Run `ionic cordova run android --prod`
+
+### iOS
+
+1. Run `ionic cordova run ios --prod`
+
 
 
 
